@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.0/phpunit.xsd"
+         cacheDirectory="var/.phpunit.cache">
+    <logging>
+        <junit outputFile="var/junit.xml"/>
+    </logging>
+    <coverage>
+        <include>
+            <directory>./src/</directory>
+        </include>
+        <report>
+            <clover outputFile="var/coverage.xml"/>
+            <xml outputDirectory="var/coverage-xml"/>
+        </report>
+    </coverage>
+    <testsuites>
+        <testsuite name="Unit">
+            <directory suffix="Test.php">./tests/Unit</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

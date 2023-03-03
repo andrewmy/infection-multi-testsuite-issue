@@ -1,0 +1,31 @@
+{
+    "name": "andrewmy/infection-multi-testsuite-issue",
+    "description": "A sample repo for the bug report",
+    "type": "project",
+    "require": {
+        "php": "~8.2.0"
+    },
+    "require-dev": {
+        "infection/infection": "^0.26.19",
+        "phpunit/phpunit": "^10.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "infection/extension-installer": true
+        },
+        "sort-packages": true,
+        "preferred-install": {
+            "*": "dist"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}
