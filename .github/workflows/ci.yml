@@ -18,4 +18,8 @@ jobs:
 
       - uses: ramsey/composer-install@v2
 
-      - run: php vendor/bin/infection
+      - run: php vendor/bin/phpunit
+
+      - run: cat var/junit.xml
+
+      - run: php vendor/bin/infection --no-progress --coverage=var
